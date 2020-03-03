@@ -9,7 +9,7 @@
 #import "LXBaseViewController.h"
 #import "LXLoginViewController.h"
 
-@interface LXBaseViewController ()<EMClientDelegate>
+@interface LXBaseViewController ()<EMClientDelegate,EMContactManagerDelegate>
 
 @end
 
@@ -18,10 +18,15 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    ///登录相关的回调
     [[EMClient sharedClient] addDelegate:self delegateQueue:nil];
+    
+    ///好友请求相关回调
+    [[EMClient sharedClient].contactManager addDelegate:self delegateQueue:nil];
 }
 
 
+#pragma mark - EMClientDelegate 登录回调
 
 /*!
  *  \~chinese
@@ -114,6 +119,90 @@
     }];
 }
 
+#pragma mark - EMContactManagerDelegate 好友申请回调
+
+#pragma mark 1.用户A发送加用户B为好友的申请，用户B会收到这个回调
+/*!
+ *  用户A发送加用户B为好友的申请，用户B会收到这个回调
+ *
+ *  @param aUsername   用户名
+ *  @param aMessage    附属信息
+ */
+- (void)friendRequestDidReceiveFromUser:(NSString *)aUsername
+                                message:(NSString *)aMessage{
+    
+    KWeakSelf
+    [self lxShowAlertTitle:[NSString stringWithFormat:@"%@ 请求添加你h为好友",aUsername] Message:aMessage preferredStyle:UIAlertControllerStyleAlert ActionTitleYes:@"同意" actionBlockYes:^{
+        // 调用:
+        [[EMClient sharedClient].contactManager approveFriendRequestFromUser:aUsername completion:^(NSString *aUsername, EMError *aError) {
+            if (!aError) {
+                NSLog(@"同意加好友申请成功");
+                [weakSelf lxShowAlertTitle:@"添加好友成功" Message:@"" preferredStyle:UIAlertControllerStyleAlert ActionTitle:@"ok" actionBlock:^{}];
+            } else {
+                NSLog(@"同意加好友申请失败的原因 --- %@", aError.errorDescription);
+                [weakSelf lxShowAlertTitle:@"同意加好友申请失败的原因" Message:aError.errorDescription preferredStyle:UIAlertControllerStyleAlert ActionTitle:@"ok" actionBlock:^{}];
+            }
+        }];
+    } ActionTitleNo:@"拒绝" actionBlockNo:^{
+        
+        [[EMClient sharedClient].contactManager declineFriendRequestFromUser:aUsername completion:^(NSString *aUsername, EMError *aError) {
+            if (!aError) {
+                NSLog(@"拒绝加好友申请成功");
+                [weakSelf lxShowAlertTitle:@"拒绝加好友申请成功" Message:@"" preferredStyle:UIAlertControllerStyleAlert ActionTitle:@"ok" actionBlock:^{}];
+            } else {
+                NSLog(@"拒绝加好友申请失败的原因 --- %@", aError.errorDescription);
+                [weakSelf lxShowAlertTitle:@"拒绝加好友申请失败的原因" Message:aError.errorDescription preferredStyle:UIAlertControllerStyleAlert ActionTitle:@"ok" actionBlock:^{}];
+            }
+        }];
+        
+    }];
+    
+}
+
+/*!
+ @method
+ @brief 用户A发送加用户B为好友的申请，用户B同意后，用户A会收到这个回调
+ */
+- (void)friendRequestDidApproveByUser:(NSString *)aUsername{
+    [self lxShowAlertTitle:[NSString stringWithFormat:@"%@ 同意你添加他为好友",aUsername] Message:@"" preferredStyle:UIAlertControllerStyleAlert ActionTitleYes:@"ok" actionBlockYes:^{
+        
+    } ActionTitleNo:@"打招呼" actionBlockNo:^{
+        
+    }];
+}
+
+/*!
+ @method
+ @brief 用户A发送加用户B为好友的申请，用户B拒绝后，用户A会收到这个回调
+ */
+- (void)friendRequestDidDeclineByUser:(NSString *)aUsername{
+    [self lxShowAlertTitle:[NSString stringWithFormat:@"%@ 拒绝你添加他为好友",aUsername] Message:@"" preferredStyle:UIAlertControllerStyleAlert ActionTitle:@"ok" actionBlock:^{}];
+}
+
+
+
+/*!
+ *  \~chinese
+ *  用户B同意用户A的好友申请后，用户A和用户B都会收到这个回调
+ *
+ *  @param aUsername   用户好友关系的另一方
+ *
+ *  \~english
+ *  Delegate method will be invoked id the user is added as a contact by another user.
+ *
+ *  Both user A and B will receive this callback after User B agreed user A's add-friend invitation
+ *
+ *  @param aUsername   Another user of user‘s friend relationship
+ */
+- (void)friendshipDidAddByUser:(NSString *)aUsername{
+    [self lxShowAlertTitle:aUsername Message:@"双方都收到的回调" preferredStyle:UIAlertControllerStyleAlert ActionTitle:@"ok" actionBlock:^{
+        
+    }];
+}
+
+
+
+#pragma mark - myself
 
 
 - (void)lxShowAlertTitle:(NSString *)title Message:(NSString *)message preferredStyle:(UIAlertControllerStyle)style ActionTitle:(NSString *)actionTitle actionBlock:(action)acblock{
@@ -126,8 +215,23 @@
     [weakSelf presentViewController:ac animated:YES completion:nil];
 }
 
+- (void)lxShowAlertTitle:(NSString *)title Message:(NSString *)message preferredStyle:(UIAlertControllerStyle)style ActionTitleYes:(NSString *)actionTitleYes actionBlockYes:(action)acblockYes ActionTitleNo:(NSString *)actionTitleNo actionBlockNo:(action)acblockNo{
+    KWeakSelf
+    UIAlertController *ac = [UIAlertController alertControllerWithTitle:title message:message preferredStyle:UIAlertControllerStyleAlert];//默认在中间显示，底部直接写0
+    UIAlertAction *sureAc = [UIAlertAction actionWithTitle:actionTitleYes style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        acblockYes();
+    }];
+    UIAlertAction *noAc = [UIAlertAction actionWithTitle:actionTitleNo style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+        acblockNo();
+    }];
+    [ac addAction:sureAc];
+    [ac addAction:noAc];
+    [weakSelf presentViewController:ac animated:YES completion:nil];
+}
+
 - (void)lxBackToLoginVC{
     [UIApplication sharedApplication].keyWindow.rootViewController = [[LXBaseNavViewController alloc] initWithRootViewController:[LXLoginViewController new]];
 }
+
 
 @end

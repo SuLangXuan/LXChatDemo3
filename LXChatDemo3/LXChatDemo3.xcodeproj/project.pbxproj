@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		2A4EE6950E484FDB5C41F170 /* Pods_LXChatDemo3.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 265EF67B83A9DFC5379A3FEF /* Pods_LXChatDemo3.framework */; };
+		A41095D9240E2C2200197E4E /* LXContactsListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A41095D7240E2C2200197E4E /* LXContactsListViewController.m */; };
+		A41095DA240E2C2200197E4E /* LXContactsListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A41095D8240E2C2200197E4E /* LXContactsListViewController.xib */; };
+		A465E8E3240E36B70074D5FC /* LXAddNewContactsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A465E8E1240E36B70074D5FC /* LXAddNewContactsViewController.m */; };
+		A465E8E4240E36B70074D5FC /* LXAddNewContactsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A465E8E2240E36B70074D5FC /* LXAddNewContactsViewController.xib */; };
 		A482F77A240D58CE00081EB8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A482F779240D58CE00081EB8 /* AppDelegate.m */; };
 		A482F77D240D58CE00081EB8 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A482F77C240D58CE00081EB8 /* SceneDelegate.m */; };
 		A482F783240D58CE00081EB8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A482F781240D58CE00081EB8 /* Main.storyboard */; };
@@ -25,11 +29,20 @@
 		A482F7B0240D605B00081EB8 /* LXRegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A482F7AE240D605B00081EB8 /* LXRegisterViewController.xib */; };
 		A482F7B5240D683B00081EB8 /* LXMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A482F7B3240D683B00081EB8 /* LXMeViewController.m */; };
 		A482F7B6240D683B00081EB8 /* LXMeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A482F7B4240D683B00081EB8 /* LXMeViewController.xib */; };
+		A498DD85240E31440001F619 /* LXBaseTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A498DD84240E31440001F619 /* LXBaseTableViewCell.m */; };
+		A498DD89240E317B0001F619 /* LXAddNewContactsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A498DD87240E317B0001F619 /* LXAddNewContactsTableViewCell.m */; };
+		A498DD8A240E317B0001F619 /* LXAddNewContactsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A498DD88240E317B0001F619 /* LXAddNewContactsTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		265EF67B83A9DFC5379A3FEF /* Pods_LXChatDemo3.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LXChatDemo3.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7008FA266303E106F3FF8263 /* Pods-LXChatDemo3.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LXChatDemo3.release.xcconfig"; path = "Target Support Files/Pods-LXChatDemo3/Pods-LXChatDemo3.release.xcconfig"; sourceTree = "<group>"; };
+		A41095D6240E2C2200197E4E /* LXContactsListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LXContactsListViewController.h; sourceTree = "<group>"; };
+		A41095D7240E2C2200197E4E /* LXContactsListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LXContactsListViewController.m; sourceTree = "<group>"; };
+		A41095D8240E2C2200197E4E /* LXContactsListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LXContactsListViewController.xib; sourceTree = "<group>"; };
+		A465E8E0240E36B70074D5FC /* LXAddNewContactsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LXAddNewContactsViewController.h; sourceTree = "<group>"; };
+		A465E8E1240E36B70074D5FC /* LXAddNewContactsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LXAddNewContactsViewController.m; sourceTree = "<group>"; };
+		A465E8E2240E36B70074D5FC /* LXAddNewContactsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LXAddNewContactsViewController.xib; sourceTree = "<group>"; };
 		A482F775240D58CE00081EB8 /* LXChatDemo3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LXChatDemo3.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A482F778240D58CE00081EB8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		A482F779240D58CE00081EB8 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -59,6 +72,11 @@
 		A482F7B2240D683B00081EB8 /* LXMeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LXMeViewController.h; sourceTree = "<group>"; };
 		A482F7B3240D683B00081EB8 /* LXMeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LXMeViewController.m; sourceTree = "<group>"; };
 		A482F7B4240D683B00081EB8 /* LXMeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LXMeViewController.xib; sourceTree = "<group>"; };
+		A498DD83240E31440001F619 /* LXBaseTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LXBaseTableViewCell.h; sourceTree = "<group>"; };
+		A498DD84240E31440001F619 /* LXBaseTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LXBaseTableViewCell.m; sourceTree = "<group>"; };
+		A498DD86240E317B0001F619 /* LXAddNewContactsTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LXAddNewContactsTableViewCell.h; sourceTree = "<group>"; };
+		A498DD87240E317B0001F619 /* LXAddNewContactsTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LXAddNewContactsTableViewCell.m; sourceTree = "<group>"; };
+		A498DD88240E317B0001F619 /* LXAddNewContactsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LXAddNewContactsTableViewCell.xib; sourceTree = "<group>"; };
 		B9E9A7BF11BBC533F4F02823 /* Pods-LXChatDemo3.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LXChatDemo3.debug.xcconfig"; path = "Target Support Files/Pods-LXChatDemo3/Pods-LXChatDemo3.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -80,6 +98,23 @@
 				265EF67B83A9DFC5379A3FEF /* Pods_LXChatDemo3.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A41095D4240E2BE300197E4E /* Contacts */ = {
+			isa = PBXGroup;
+			children = (
+				A41095D5240E2C0100197E4E /* Controller */,
+			);
+			path = Contacts;
+			sourceTree = "<group>";
+		};
+		A41095D5240E2C0100197E4E /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				A498DD82240E312A0001F619 /* View */,
+				A498DD81240E311C0001F619 /* Controller */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 		A482F76C240D58CE00081EB8 = {
@@ -121,6 +156,7 @@
 		A482F791240D591C00081EB8 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				A41095D4240E2BE300197E4E /* Contacts */,
 				A482F7B1240D682700081EB8 /* Me */,
 				A482F7AB240D603900081EB8 /* Register */,
 				A482F7A5240D5D7700081EB8 /* LogIn */,
@@ -138,6 +174,8 @@
 				A482F794240D596300081EB8 /* LXBaseViewController.m */,
 				A482F797240D598D00081EB8 /* LXBaseNavViewController.h */,
 				A482F798240D598D00081EB8 /* LXBaseNavViewController.m */,
+				A498DD83240E31440001F619 /* LXBaseTableViewCell.h */,
+				A498DD84240E31440001F619 /* LXBaseTableViewCell.m */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -189,6 +227,29 @@
 				A482F7B4240D683B00081EB8 /* LXMeViewController.xib */,
 			);
 			path = Me;
+			sourceTree = "<group>";
+		};
+		A498DD81240E311C0001F619 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				A41095D6240E2C2200197E4E /* LXContactsListViewController.h */,
+				A41095D7240E2C2200197E4E /* LXContactsListViewController.m */,
+				A41095D8240E2C2200197E4E /* LXContactsListViewController.xib */,
+				A465E8E0240E36B70074D5FC /* LXAddNewContactsViewController.h */,
+				A465E8E1240E36B70074D5FC /* LXAddNewContactsViewController.m */,
+				A465E8E2240E36B70074D5FC /* LXAddNewContactsViewController.xib */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		A498DD82240E312A0001F619 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A498DD86240E317B0001F619 /* LXAddNewContactsTableViewCell.h */,
+				A498DD87240E317B0001F619 /* LXAddNewContactsTableViewCell.m */,
+				A498DD88240E317B0001F619 /* LXAddNewContactsTableViewCell.xib */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		C956586BDA524F72C6665191 /* Pods */ = {
@@ -263,8 +324,11 @@
 				A482F7B6240D683B00081EB8 /* LXMeViewController.xib in Resources */,
 				A482F7A4240D5BF400081EB8 /* LXChatListViewController.xib in Resources */,
 				A482F788240D58D000081EB8 /* LaunchScreen.storyboard in Resources */,
+				A465E8E4240E36B70074D5FC /* LXAddNewContactsViewController.xib in Resources */,
+				A498DD8A240E317B0001F619 /* LXAddNewContactsTableViewCell.xib in Resources */,
 				A482F7B0240D605B00081EB8 /* LXRegisterViewController.xib in Resources */,
 				A482F785240D58D000081EB8 /* Assets.xcassets in Resources */,
+				A41095DA240E2C2200197E4E /* LXContactsListViewController.xib in Resources */,
 				A482F783240D58CE00081EB8 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -318,13 +382,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A498DD89240E317B0001F619 /* LXAddNewContactsTableViewCell.m in Sources */,
 				A482F7AF240D605B00081EB8 /* LXRegisterViewController.m in Sources */,
 				A482F799240D598D00081EB8 /* LXBaseNavViewController.m in Sources */,
+				A498DD85240E31440001F619 /* LXBaseTableViewCell.m in Sources */,
 				A482F77A240D58CE00081EB8 /* AppDelegate.m in Sources */,
 				A482F78B240D58D000081EB8 /* main.m in Sources */,
 				A482F7B5240D683B00081EB8 /* LXMeViewController.m in Sources */,
 				A482F795240D596300081EB8 /* LXBaseViewController.m in Sources */,
+				A465E8E3240E36B70074D5FC /* LXAddNewContactsViewController.m in Sources */,
 				A482F7A3240D5BF400081EB8 /* LXChatListViewController.m in Sources */,
+				A41095D9240E2C2200197E4E /* LXContactsListViewController.m in Sources */,
 				A482F77D240D58CE00081EB8 /* SceneDelegate.m in Sources */,
 				A482F7A9240D5D9500081EB8 /* LXLoginViewController.m in Sources */,
 				A482F79E240D5B9800081EB8 /* LXMainTabBarViewController.m in Sources */,

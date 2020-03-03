@@ -26,6 +26,8 @@ typedef void (^action)(void);
 - (void)lxShowAlertTitle:(NSString *)title Message:(NSString *)message preferredStyle:(UIAlertControllerStyle)style ActionTitle:(NSString *)actionTitle actionBlock:(action)acblock;
 
 
+- (void)lxShowAlertTitle:(NSString *)title Message:(NSString *)message preferredStyle:(UIAlertControllerStyle)style ActionTitleYes:(NSString *)actionTitleYes actionBlockYes:(action)acblockYes ActionTitleNo:(NSString *)actionTitleNo actionBlockNo:(action)acblockNo;
+
 - (void)lxBackToLoginVC;
 @end
 

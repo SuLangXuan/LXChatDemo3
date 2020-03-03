@@ -14,6 +14,7 @@
 
 #import "LXBaseViewController.h"
 #import "LXBaseNavViewController.h"
+#import "LXBaseTableViewCell.h"
 
 // 弱引用
 #define KWeakSelf __weak typeof(self) weakSelf = self;

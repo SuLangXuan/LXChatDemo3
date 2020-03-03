@@ -1,12 +1,11 @@
-# Uncomment the next line to define a global platform for your project
-# platform :ios, '9.0'
 
 target 'LXChatDemo3' do
   # Comment the next line if you don't want to use dynamic frameworks
-  use_frameworks!
+#  use_frameworks!
 
   # Pods for LXChatDemo3
 #Full版本(带实时音视频通话功能)
 pod 'Hyphenate'
+
 
 end

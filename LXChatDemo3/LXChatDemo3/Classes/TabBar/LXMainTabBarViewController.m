@@ -9,6 +9,8 @@
 #import "LXMainTabBarViewController.h"
 #import "LXChatListViewController.h"
 #import "LXMeViewController.h"
+#import "LXContactsListViewController.h"
+
 
 @interface LXMainTabBarViewController ()
 
@@ -24,7 +26,7 @@
 
 - (void)addChildVC{
     [self addChildViewController:[LXChatListViewController new] title:@"会话" imageName:@"" selectImageName:@""];
-    [self addChildViewController:[LXChatListViewController new] title:@"联系人" imageName:@"" selectImageName:@""];
+    [self addChildViewController:[LXContactsListViewController new] title:@"联系人" imageName:@"" selectImageName:@""];
     [self addChildViewController:[LXMeViewController new] title:@"我的" imageName:@"" selectImageName:@""];
     
 }
