@@ -24,6 +24,9 @@ typedef void (^action)(void);
 /// @param actionTitle <#actionTitle description#>
 /// @param acblock 点击按钮要做的事
 - (void)lxShowAlertTitle:(NSString *)title Message:(NSString *)message preferredStyle:(UIAlertControllerStyle)style ActionTitle:(NSString *)actionTitle actionBlock:(action)acblock;
+
+
+- (void)lxBackToLoginVC;
 @end
 
 NS_ASSUME_NONNULL_END

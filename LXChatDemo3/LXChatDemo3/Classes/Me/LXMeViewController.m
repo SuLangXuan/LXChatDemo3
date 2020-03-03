@@ -11,7 +11,7 @@
 
 @interface LXMeViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *userIDLabel;
-
+@property (weak, nonatomic) IBOutlet UILabel *hxAppKeyLabel;
 @end
 
 @implementation LXMeViewController
@@ -20,7 +20,7 @@
     [super viewDidLoad];
     
     self.userIDLabel.text = [NSString stringWithFormat:@"用户ID：%@",[EMClient sharedClient].currentUsername];
-    
+    self.hxAppKeyLabel.text = [NSString stringWithFormat:@"%@",KAppKey];
 }
 
 - (IBAction)logOut:(id)sender {

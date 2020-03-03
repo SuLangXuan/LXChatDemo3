@@ -40,10 +40,6 @@
  */
 - (void)connectionStateDidChange:(EMConnectionState)aConnectionState{
     NSLog(@"网络状态变化,or 手机无法上网");
-    //    UIAlertController *ac = [UIAlertController alertControllerWithTitle:@"网络状态变化,手机无法上网" message:@"" preferredStyle:UIAlertControllerStyleAlert];//默认在中间显示，底部直接写0
-    //    UIAlertAction *sureAc = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {}];
-    //    [ac addAction:sureAc];
-    //    [self presentViewController:ac animated:YES completion:nil];
 }
 
 /*!
@@ -70,13 +66,10 @@
  */
 - (void)userAccountDidLoginFromOtherDevice{
     NSLog(@"当前登录账号在其它设备登录时会接收到此回调");
-    
-    UIAlertController *ac = [UIAlertController alertControllerWithTitle:@"当前登录账号在其它设备登录时会接收到此回调" message:@"" preferredStyle:UIAlertControllerStyleAlert];//默认在中间显示，底部直接写0
-    UIAlertAction *sureAc = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
-        [UIApplication sharedApplication].keyWindow.rootViewController = [[LXBaseNavViewController alloc] initWithRootViewController:[LXLoginViewController new]];
+    KWeakSelf
+    [self lxShowAlertTitle:@"当前登录账号在其它设备登录时会接收到此回调" Message:@"" preferredStyle:UIAlertControllerStyleAlert ActionTitle:@"确定" actionBlock:^{
+        [weakSelf lxBackToLoginVC];
     }];
-    [ac addAction:sureAc];
-    [self presentViewController:ac animated:YES completion:nil];
 }
 
 /*!
@@ -88,7 +81,6 @@
  */
 - (void)userAccountDidRemoveFromServer{
     NSLog(@"当前登录账号已经被从服务器端删除时会收到该回调");
-    
 }
 
 /*!
@@ -115,14 +107,11 @@
  *    2. Logged in too many devices
  */
 - (void)userAccountDidForcedToLogout:(EMError *)aError{
-    NSLog(@"1用户的账号从服务器端被强制下线or,2用户在别的设备上登录，把当前设备上登录的用户踢出or,3.从服务器端被强制下线");
-    
-    UIAlertController *ac = [UIAlertController alertControllerWithTitle:@"1用户的账号从服务器端被强制下线or,2用户在别的设备上登录，把当前设备上登录的用户踢出or,3.从服务器端被强制下线" message:@"" preferredStyle:UIAlertControllerStyleAlert];//默认在中间显示，底部直接写0
-    UIAlertAction *sureAc = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
-        [UIApplication sharedApplication].keyWindow.rootViewController = [[LXBaseNavViewController alloc] initWithRootViewController:[LXLoginViewController new]];
+    NSLog(@"1.密码被修改；or,2.从服务器端被强制下线");
+    KWeakSelf
+    [self lxShowAlertTitle:@"1.密码被修改；or,2.从服务器端被强制下线" Message:@"" preferredStyle:UIAlertControllerStyleAlert ActionTitle:@"确定" actionBlock:^{
+        [weakSelf lxBackToLoginVC];
     }];
-    [ac addAction:sureAc];
-    [self presentViewController:ac animated:YES completion:nil];
 }
 
 
@@ -135,6 +124,10 @@
     }];
     [ac addAction:sureAc];
     [weakSelf presentViewController:ac animated:YES completion:nil];
+}
+
+- (void)lxBackToLoginVC{
+    [UIApplication sharedApplication].keyWindow.rootViewController = [[LXBaseNavViewController alloc] initWithRootViewController:[LXLoginViewController new]];
 }
 
 @end

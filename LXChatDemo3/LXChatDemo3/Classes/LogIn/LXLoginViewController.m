@@ -13,6 +13,7 @@
 @interface LXLoginViewController ()
 @property (weak, nonatomic) IBOutlet UITextField *accountTF;
 @property (weak, nonatomic) IBOutlet UITextField *passwordTF;
+@property (weak, nonatomic) IBOutlet UILabel *hxAppKeyLabel;
 @end
 
 @implementation LXLoginViewController
@@ -21,6 +22,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     self.title = @"登录";
+    self.hxAppKeyLabel.text = [NSString stringWithFormat:@"%@",KAppKey];
 }
 
 - (IBAction)login:(id)sender {
@@ -28,9 +30,12 @@
     [[EMClient sharedClient] loginWithUsername:self.accountTF.text password:self.passwordTF.text completion:^(NSString *aUsername, EMError *aError) {
         if (!aError) {
             NSLog(@"登录成功");
-            //自动登录：即首次登录成功后，不需要再次调用登录方法，在下次 APP 启动时，SDK 会自动为您登录。并且如果您自动登录失败，也可以读取到之前的会话信息。
             [[EMClient sharedClient].options setIsAutoLogin:YES];
-            [UIApplication sharedApplication].keyWindow.rootViewController = [LXMainTabBarViewController new];
+            [weakSelf lxShowAlertTitle:@"登录成功!" Message:aError.errorDescription preferredStyle:UIAlertControllerStyleAlert ActionTitle:@"确定" actionBlock:^{
+                [UIApplication sharedApplication].keyWindow.rootViewController = [LXMainTabBarViewController new];
+            }];
+            //自动登录：即首次登录成功后，不需要再次调用登录方法，在下次 APP 启动时，SDK 会自动为您登录。并且如果您自动登录失败，也可以读取到之前的会话信息。
+            
         } else {
             [weakSelf lxShowAlertTitle:@"登录失败的原因:" Message:aError.errorDescription preferredStyle:UIAlertControllerStyleAlert ActionTitle:@"重新登录" actionBlock:^{}];
         }
@@ -42,6 +47,10 @@
     self.accountTF.text = @"xuan";
     self.passwordTF.text = @"123";
     
+}
+- (IBAction)autoWrite2:(id)sender {
+    self.accountTF.text = @"lang";
+    self.passwordTF.text = @"123";
 }
 
 - (IBAction)goToRegisterVC:(id)sender {
