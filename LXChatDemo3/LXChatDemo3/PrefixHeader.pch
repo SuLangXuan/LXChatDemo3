@@ -1,0 +1,27 @@
+//
+//  PrefixHeader.pch
+//  LXChatDemo3
+//
+//  Created by Su on 2020/3/2.
+//  Copyright © 2020 com.lxiOS. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#import "LXBaseViewController.h"
+#import "LXBaseNavViewController.h"
+
+// 弱引用
+#define KWeakSelf __weak typeof(self) weakSelf = self;
+#define KAppKey @"1110200229098135#lxchatdemo"
+
+#ifdef __OBJC__
+// 包含实时音视频功能 SDK 的头文件
+#import <Hyphenate/Hyphenate.h>
+
+#endif
+#endif /* PrefixHeader_pch */

@@ -1,0 +1,526 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2A4EE6950E484FDB5C41F170 /* Pods_LXChatDemo3.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 265EF67B83A9DFC5379A3FEF /* Pods_LXChatDemo3.framework */; };
+		A482F77A240D58CE00081EB8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A482F779240D58CE00081EB8 /* AppDelegate.m */; };
+		A482F77D240D58CE00081EB8 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A482F77C240D58CE00081EB8 /* SceneDelegate.m */; };
+		A482F783240D58CE00081EB8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A482F781240D58CE00081EB8 /* Main.storyboard */; };
+		A482F785240D58D000081EB8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A482F784240D58D000081EB8 /* Assets.xcassets */; };
+		A482F788240D58D000081EB8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A482F786240D58D000081EB8 /* LaunchScreen.storyboard */; };
+		A482F78B240D58D000081EB8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A482F78A240D58D000081EB8 /* main.m */; };
+		A482F795240D596300081EB8 /* LXBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A482F794240D596300081EB8 /* LXBaseViewController.m */; };
+		A482F799240D598D00081EB8 /* LXBaseNavViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A482F798240D598D00081EB8 /* LXBaseNavViewController.m */; };
+		A482F79E240D5B9800081EB8 /* LXMainTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A482F79D240D5B9800081EB8 /* LXMainTabBarViewController.m */; };
+		A482F7A3240D5BF400081EB8 /* LXChatListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A482F7A1240D5BF400081EB8 /* LXChatListViewController.m */; };
+		A482F7A4240D5BF400081EB8 /* LXChatListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A482F7A2240D5BF400081EB8 /* LXChatListViewController.xib */; };
+		A482F7A9240D5D9500081EB8 /* LXLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A482F7A7240D5D9500081EB8 /* LXLoginViewController.m */; };
+		A482F7AA240D5D9500081EB8 /* LXLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A482F7A8240D5D9500081EB8 /* LXLoginViewController.xib */; };
+		A482F7AF240D605B00081EB8 /* LXRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A482F7AD240D605B00081EB8 /* LXRegisterViewController.m */; };
+		A482F7B0240D605B00081EB8 /* LXRegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A482F7AE240D605B00081EB8 /* LXRegisterViewController.xib */; };
+		A482F7B5240D683B00081EB8 /* LXMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A482F7B3240D683B00081EB8 /* LXMeViewController.m */; };
+		A482F7B6240D683B00081EB8 /* LXMeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A482F7B4240D683B00081EB8 /* LXMeViewController.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		265EF67B83A9DFC5379A3FEF /* Pods_LXChatDemo3.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LXChatDemo3.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7008FA266303E106F3FF8263 /* Pods-LXChatDemo3.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LXChatDemo3.release.xcconfig"; path = "Target Support Files/Pods-LXChatDemo3/Pods-LXChatDemo3.release.xcconfig"; sourceTree = "<group>"; };
+		A482F775240D58CE00081EB8 /* LXChatDemo3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LXChatDemo3.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A482F778240D58CE00081EB8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		A482F779240D58CE00081EB8 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		A482F77B240D58CE00081EB8 /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
+		A482F77C240D58CE00081EB8 /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
+		A482F782240D58CE00081EB8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		A482F784240D58D000081EB8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A482F787240D58D000081EB8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		A482F789240D58D000081EB8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A482F78A240D58D000081EB8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		A482F793240D596300081EB8 /* LXBaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LXBaseViewController.h; sourceTree = "<group>"; };
+		A482F794240D596300081EB8 /* LXBaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LXBaseViewController.m; sourceTree = "<group>"; };
+		A482F797240D598D00081EB8 /* LXBaseNavViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LXBaseNavViewController.h; sourceTree = "<group>"; };
+		A482F798240D598D00081EB8 /* LXBaseNavViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LXBaseNavViewController.m; sourceTree = "<group>"; };
+		A482F79A240D5AFD00081EB8 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		A482F79C240D5B9800081EB8 /* LXMainTabBarViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LXMainTabBarViewController.h; sourceTree = "<group>"; };
+		A482F79D240D5B9800081EB8 /* LXMainTabBarViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LXMainTabBarViewController.m; sourceTree = "<group>"; };
+		A482F7A0240D5BF400081EB8 /* LXChatListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LXChatListViewController.h; sourceTree = "<group>"; };
+		A482F7A1240D5BF400081EB8 /* LXChatListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LXChatListViewController.m; sourceTree = "<group>"; };
+		A482F7A2240D5BF400081EB8 /* LXChatListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LXChatListViewController.xib; sourceTree = "<group>"; };
+		A482F7A6240D5D9500081EB8 /* LXLoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LXLoginViewController.h; sourceTree = "<group>"; };
+		A482F7A7240D5D9500081EB8 /* LXLoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LXLoginViewController.m; sourceTree = "<group>"; };
+		A482F7A8240D5D9500081EB8 /* LXLoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LXLoginViewController.xib; sourceTree = "<group>"; };
+		A482F7AC240D605B00081EB8 /* LXRegisterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LXRegisterViewController.h; sourceTree = "<group>"; };
+		A482F7AD240D605B00081EB8 /* LXRegisterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LXRegisterViewController.m; sourceTree = "<group>"; };
+		A482F7AE240D605B00081EB8 /* LXRegisterViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LXRegisterViewController.xib; sourceTree = "<group>"; };
+		A482F7B2240D683B00081EB8 /* LXMeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LXMeViewController.h; sourceTree = "<group>"; };
+		A482F7B3240D683B00081EB8 /* LXMeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LXMeViewController.m; sourceTree = "<group>"; };
+		A482F7B4240D683B00081EB8 /* LXMeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LXMeViewController.xib; sourceTree = "<group>"; };
+		B9E9A7BF11BBC533F4F02823 /* Pods-LXChatDemo3.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LXChatDemo3.debug.xcconfig"; path = "Target Support Files/Pods-LXChatDemo3/Pods-LXChatDemo3.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A482F772240D58CE00081EB8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2A4EE6950E484FDB5C41F170 /* Pods_LXChatDemo3.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0293FF474E7D776924463627 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				265EF67B83A9DFC5379A3FEF /* Pods_LXChatDemo3.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A482F76C240D58CE00081EB8 = {
+			isa = PBXGroup;
+			children = (
+				A482F777240D58CE00081EB8 /* LXChatDemo3 */,
+				A482F776240D58CE00081EB8 /* Products */,
+				C956586BDA524F72C6665191 /* Pods */,
+				0293FF474E7D776924463627 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		A482F776240D58CE00081EB8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A482F775240D58CE00081EB8 /* LXChatDemo3.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A482F777240D58CE00081EB8 /* LXChatDemo3 */ = {
+			isa = PBXGroup;
+			children = (
+				A482F791240D591C00081EB8 /* Classes */,
+				A482F778240D58CE00081EB8 /* AppDelegate.h */,
+				A482F779240D58CE00081EB8 /* AppDelegate.m */,
+				A482F77B240D58CE00081EB8 /* SceneDelegate.h */,
+				A482F77C240D58CE00081EB8 /* SceneDelegate.m */,
+				A482F781240D58CE00081EB8 /* Main.storyboard */,
+				A482F784240D58D000081EB8 /* Assets.xcassets */,
+				A482F786240D58D000081EB8 /* LaunchScreen.storyboard */,
+				A482F789240D58D000081EB8 /* Info.plist */,
+				A482F78A240D58D000081EB8 /* main.m */,
+				A482F79A240D5AFD00081EB8 /* PrefixHeader.pch */,
+			);
+			path = LXChatDemo3;
+			sourceTree = "<group>";
+		};
+		A482F791240D591C00081EB8 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				A482F7B1240D682700081EB8 /* Me */,
+				A482F7AB240D603900081EB8 /* Register */,
+				A482F7A5240D5D7700081EB8 /* LogIn */,
+				A482F79F240D5BB800081EB8 /* Chat */,
+				A482F79B240D5B6D00081EB8 /* TabBar */,
+				A482F792240D592800081EB8 /* Base */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		A482F792240D592800081EB8 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				A482F793240D596300081EB8 /* LXBaseViewController.h */,
+				A482F794240D596300081EB8 /* LXBaseViewController.m */,
+				A482F797240D598D00081EB8 /* LXBaseNavViewController.h */,
+				A482F798240D598D00081EB8 /* LXBaseNavViewController.m */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		A482F79B240D5B6D00081EB8 /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				A482F79C240D5B9800081EB8 /* LXMainTabBarViewController.h */,
+				A482F79D240D5B9800081EB8 /* LXMainTabBarViewController.m */,
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
+		A482F79F240D5BB800081EB8 /* Chat */ = {
+			isa = PBXGroup;
+			children = (
+				A482F7A0240D5BF400081EB8 /* LXChatListViewController.h */,
+				A482F7A1240D5BF400081EB8 /* LXChatListViewController.m */,
+				A482F7A2240D5BF400081EB8 /* LXChatListViewController.xib */,
+			);
+			path = Chat;
+			sourceTree = "<group>";
+		};
+		A482F7A5240D5D7700081EB8 /* LogIn */ = {
+			isa = PBXGroup;
+			children = (
+				A482F7A6240D5D9500081EB8 /* LXLoginViewController.h */,
+				A482F7A7240D5D9500081EB8 /* LXLoginViewController.m */,
+				A482F7A8240D5D9500081EB8 /* LXLoginViewController.xib */,
+			);
+			path = LogIn;
+			sourceTree = "<group>";
+		};
+		A482F7AB240D603900081EB8 /* Register */ = {
+			isa = PBXGroup;
+			children = (
+				A482F7AC240D605B00081EB8 /* LXRegisterViewController.h */,
+				A482F7AD240D605B00081EB8 /* LXRegisterViewController.m */,
+				A482F7AE240D605B00081EB8 /* LXRegisterViewController.xib */,
+			);
+			path = Register;
+			sourceTree = "<group>";
+		};
+		A482F7B1240D682700081EB8 /* Me */ = {
+			isa = PBXGroup;
+			children = (
+				A482F7B2240D683B00081EB8 /* LXMeViewController.h */,
+				A482F7B3240D683B00081EB8 /* LXMeViewController.m */,
+				A482F7B4240D683B00081EB8 /* LXMeViewController.xib */,
+			);
+			path = Me;
+			sourceTree = "<group>";
+		};
+		C956586BDA524F72C6665191 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B9E9A7BF11BBC533F4F02823 /* Pods-LXChatDemo3.debug.xcconfig */,
+				7008FA266303E106F3FF8263 /* Pods-LXChatDemo3.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A482F774240D58CE00081EB8 /* LXChatDemo3 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A482F78E240D58D000081EB8 /* Build configuration list for PBXNativeTarget "LXChatDemo3" */;
+			buildPhases = (
+				B5FB946F0D8E8B822D9521AF /* [CP] Check Pods Manifest.lock */,
+				A482F771240D58CE00081EB8 /* Sources */,
+				A482F772240D58CE00081EB8 /* Frameworks */,
+				A482F773240D58CE00081EB8 /* Resources */,
+				871968DEDFDCA0891EB16A4E /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LXChatDemo3;
+			productName = LXChatDemo3;
+			productReference = A482F775240D58CE00081EB8 /* LXChatDemo3.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A482F76D240D58CE00081EB8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1110;
+				ORGANIZATIONNAME = com.lxiOS;
+				TargetAttributes = {
+					A482F774240D58CE00081EB8 = {
+						CreatedOnToolsVersion = 11.1;
+					};
+				};
+			};
+			buildConfigurationList = A482F770240D58CE00081EB8 /* Build configuration list for PBXProject "LXChatDemo3" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A482F76C240D58CE00081EB8;
+			productRefGroup = A482F776240D58CE00081EB8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A482F774240D58CE00081EB8 /* LXChatDemo3 */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A482F773240D58CE00081EB8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A482F7AA240D5D9500081EB8 /* LXLoginViewController.xib in Resources */,
+				A482F7B6240D683B00081EB8 /* LXMeViewController.xib in Resources */,
+				A482F7A4240D5BF400081EB8 /* LXChatListViewController.xib in Resources */,
+				A482F788240D58D000081EB8 /* LaunchScreen.storyboard in Resources */,
+				A482F7B0240D605B00081EB8 /* LXRegisterViewController.xib in Resources */,
+				A482F785240D58D000081EB8 /* Assets.xcassets in Resources */,
+				A482F783240D58CE00081EB8 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		871968DEDFDCA0891EB16A4E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LXChatDemo3/Pods-LXChatDemo3-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LXChatDemo3/Pods-LXChatDemo3-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-LXChatDemo3/Pods-LXChatDemo3-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B5FB946F0D8E8B822D9521AF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LXChatDemo3-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A482F771240D58CE00081EB8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A482F7AF240D605B00081EB8 /* LXRegisterViewController.m in Sources */,
+				A482F799240D598D00081EB8 /* LXBaseNavViewController.m in Sources */,
+				A482F77A240D58CE00081EB8 /* AppDelegate.m in Sources */,
+				A482F78B240D58D000081EB8 /* main.m in Sources */,
+				A482F7B5240D683B00081EB8 /* LXMeViewController.m in Sources */,
+				A482F795240D596300081EB8 /* LXBaseViewController.m in Sources */,
+				A482F7A3240D5BF400081EB8 /* LXChatListViewController.m in Sources */,
+				A482F77D240D58CE00081EB8 /* SceneDelegate.m in Sources */,
+				A482F7A9240D5D9500081EB8 /* LXLoginViewController.m in Sources */,
+				A482F79E240D5B9800081EB8 /* LXMainTabBarViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		A482F781240D58CE00081EB8 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A482F782240D58CE00081EB8 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		A482F786240D58D000081EB8 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A482F787240D58D000081EB8 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A482F78C240D58D000081EB8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		A482F78D240D58D000081EB8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A482F78F240D58D000081EB8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B9E9A7BF11BBC533F4F02823 /* Pods-LXChatDemo3.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				GCC_PREFIX_HEADER = ./LXChatDemo3/PrefixHeader.pch;
+				INFOPLIST_FILE = LXChatDemo3/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.lxiOS.LXChatDemo3;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A482F790240D58D000081EB8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7008FA266303E106F3FF8263 /* Pods-LXChatDemo3.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				GCC_PREFIX_HEADER = ./LXChatDemo3/PrefixHeader.pch;
+				INFOPLIST_FILE = LXChatDemo3/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.lxiOS.LXChatDemo3;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A482F770240D58CE00081EB8 /* Build configuration list for PBXProject "LXChatDemo3" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A482F78C240D58D000081EB8 /* Debug */,
+				A482F78D240D58D000081EB8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A482F78E240D58D000081EB8 /* Build configuration list for PBXNativeTarget "LXChatDemo3" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A482F78F240D58D000081EB8 /* Debug */,
+				A482F790240D58D000081EB8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A482F76D240D58CE00081EB8 /* Project object */;
+}
