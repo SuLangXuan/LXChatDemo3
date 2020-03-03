@@ -9,7 +9,7 @@
 #import "LXBaseViewController.h"
 #import "LXLoginViewController.h"
 
-@interface LXBaseViewController ()<EMClientDelegate,EMContactManagerDelegate>
+@interface LXBaseViewController ()<EMClientDelegate,EMContactManagerDelegate,EMChatManagerDelegate>
 
 @end
 
@@ -23,6 +23,9 @@
     
     ///好友请求相关回调
     [[EMClient sharedClient].contactManager addDelegate:self delegateQueue:nil];
+    
+    // 消息发送收到相关回调
+    [[EMClient sharedClient].chatManager addDelegate:self delegateQueue:nil];
 }
 
 

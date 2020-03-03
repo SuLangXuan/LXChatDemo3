@@ -10,8 +10,13 @@
 		2A4EE6950E484FDB5C41F170 /* Pods_LXChatDemo3.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 265EF67B83A9DFC5379A3FEF /* Pods_LXChatDemo3.framework */; };
 		A41095D9240E2C2200197E4E /* LXContactsListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A41095D7240E2C2200197E4E /* LXContactsListViewController.m */; };
 		A41095DA240E2C2200197E4E /* LXContactsListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A41095D8240E2C2200197E4E /* LXContactsListViewController.xib */; };
+		A459C443240E7B8900A01D16 /* LXChatSingleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A459C441240E7B8900A01D16 /* LXChatSingleViewController.m */; };
+		A459C444240E7B8900A01D16 /* LXChatSingleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A459C442240E7B8900A01D16 /* LXChatSingleViewController.xib */; };
+		A459C448240E84B700A01D16 /* LXConversionListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A459C447240E84B700A01D16 /* LXConversionListModel.m */; };
 		A465E8E3240E36B70074D5FC /* LXAddNewContactsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A465E8E1240E36B70074D5FC /* LXAddNewContactsViewController.m */; };
 		A465E8E4240E36B70074D5FC /* LXAddNewContactsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A465E8E2240E36B70074D5FC /* LXAddNewContactsViewController.xib */; };
+		A4806D6F240E4C10009B0189 /* LXChatListConversationsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A4806D6D240E4C10009B0189 /* LXChatListConversationsTableViewCell.m */; };
+		A4806D70240E4C10009B0189 /* LXChatListConversationsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A4806D6E240E4C10009B0189 /* LXChatListConversationsTableViewCell.xib */; };
 		A482F77A240D58CE00081EB8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A482F779240D58CE00081EB8 /* AppDelegate.m */; };
 		A482F77D240D58CE00081EB8 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A482F77C240D58CE00081EB8 /* SceneDelegate.m */; };
 		A482F783240D58CE00081EB8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A482F781240D58CE00081EB8 /* Main.storyboard */; };
@@ -32,6 +37,7 @@
 		A498DD85240E31440001F619 /* LXBaseTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A498DD84240E31440001F619 /* LXBaseTableViewCell.m */; };
 		A498DD89240E317B0001F619 /* LXAddNewContactsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A498DD87240E317B0001F619 /* LXAddNewContactsTableViewCell.m */; };
 		A498DD8A240E317B0001F619 /* LXAddNewContactsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A498DD88240E317B0001F619 /* LXAddNewContactsTableViewCell.xib */; };
+		A4C8D7FA240E59D100986167 /* LXEMMessageHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = A4C8D7F9240E59D100986167 /* LXEMMessageHelper.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,9 +46,17 @@
 		A41095D6240E2C2200197E4E /* LXContactsListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LXContactsListViewController.h; sourceTree = "<group>"; };
 		A41095D7240E2C2200197E4E /* LXContactsListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LXContactsListViewController.m; sourceTree = "<group>"; };
 		A41095D8240E2C2200197E4E /* LXContactsListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LXContactsListViewController.xib; sourceTree = "<group>"; };
+		A459C440240E7B8900A01D16 /* LXChatSingleViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LXChatSingleViewController.h; sourceTree = "<group>"; };
+		A459C441240E7B8900A01D16 /* LXChatSingleViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LXChatSingleViewController.m; sourceTree = "<group>"; };
+		A459C442240E7B8900A01D16 /* LXChatSingleViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LXChatSingleViewController.xib; sourceTree = "<group>"; };
+		A459C446240E84B700A01D16 /* LXConversionListModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LXConversionListModel.h; sourceTree = "<group>"; };
+		A459C447240E84B700A01D16 /* LXConversionListModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LXConversionListModel.m; sourceTree = "<group>"; };
 		A465E8E0240E36B70074D5FC /* LXAddNewContactsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LXAddNewContactsViewController.h; sourceTree = "<group>"; };
 		A465E8E1240E36B70074D5FC /* LXAddNewContactsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LXAddNewContactsViewController.m; sourceTree = "<group>"; };
 		A465E8E2240E36B70074D5FC /* LXAddNewContactsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LXAddNewContactsViewController.xib; sourceTree = "<group>"; };
+		A4806D6C240E4C10009B0189 /* LXChatListConversationsTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LXChatListConversationsTableViewCell.h; sourceTree = "<group>"; };
+		A4806D6D240E4C10009B0189 /* LXChatListConversationsTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LXChatListConversationsTableViewCell.m; sourceTree = "<group>"; };
+		A4806D6E240E4C10009B0189 /* LXChatListConversationsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LXChatListConversationsTableViewCell.xib; sourceTree = "<group>"; };
 		A482F775240D58CE00081EB8 /* LXChatDemo3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LXChatDemo3.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A482F778240D58CE00081EB8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		A482F779240D58CE00081EB8 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -77,6 +91,8 @@
 		A498DD86240E317B0001F619 /* LXAddNewContactsTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LXAddNewContactsTableViewCell.h; sourceTree = "<group>"; };
 		A498DD87240E317B0001F619 /* LXAddNewContactsTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LXAddNewContactsTableViewCell.m; sourceTree = "<group>"; };
 		A498DD88240E317B0001F619 /* LXAddNewContactsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LXAddNewContactsTableViewCell.xib; sourceTree = "<group>"; };
+		A4C8D7F8240E59D100986167 /* LXEMMessageHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LXEMMessageHelper.h; sourceTree = "<group>"; };
+		A4C8D7F9240E59D100986167 /* LXEMMessageHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LXEMMessageHelper.m; sourceTree = "<group>"; };
 		B9E9A7BF11BBC533F4F02823 /* Pods-LXChatDemo3.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LXChatDemo3.debug.xcconfig"; path = "Target Support Files/Pods-LXChatDemo3/Pods-LXChatDemo3.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -115,6 +131,47 @@
 				A498DD81240E311C0001F619 /* Controller */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		A459C445240E849700A01D16 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A459C446240E84B700A01D16 /* LXConversionListModel.h */,
+				A459C447240E84B700A01D16 /* LXConversionListModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		A4806D69240E4804009B0189 /* List */ = {
+			isa = PBXGroup;
+			children = (
+				A459C445240E849700A01D16 /* Model */,
+				A4806D6B240E4BDC009B0189 /* View */,
+				A482F7A0240D5BF400081EB8 /* LXChatListViewController.h */,
+				A482F7A1240D5BF400081EB8 /* LXChatListViewController.m */,
+				A482F7A2240D5BF400081EB8 /* LXChatListViewController.xib */,
+			);
+			path = List;
+			sourceTree = "<group>";
+		};
+		A4806D6A240E4816009B0189 /* chatSingleRoom */ = {
+			isa = PBXGroup;
+			children = (
+				A459C440240E7B8900A01D16 /* LXChatSingleViewController.h */,
+				A459C441240E7B8900A01D16 /* LXChatSingleViewController.m */,
+				A459C442240E7B8900A01D16 /* LXChatSingleViewController.xib */,
+			);
+			path = chatSingleRoom;
+			sourceTree = "<group>";
+		};
+		A4806D6B240E4BDC009B0189 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A4806D6C240E4C10009B0189 /* LXChatListConversationsTableViewCell.h */,
+				A4806D6D240E4C10009B0189 /* LXChatListConversationsTableViewCell.m */,
+				A4806D6E240E4C10009B0189 /* LXChatListConversationsTableViewCell.xib */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		A482F76C240D58CE00081EB8 = {
@@ -156,6 +213,7 @@
 		A482F791240D591C00081EB8 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				A4C8D7F7240E59B300986167 /* Tools */,
 				A41095D4240E2BE300197E4E /* Contacts */,
 				A482F7B1240D682700081EB8 /* Me */,
 				A482F7AB240D603900081EB8 /* Register */,
@@ -192,9 +250,8 @@
 		A482F79F240D5BB800081EB8 /* Chat */ = {
 			isa = PBXGroup;
 			children = (
-				A482F7A0240D5BF400081EB8 /* LXChatListViewController.h */,
-				A482F7A1240D5BF400081EB8 /* LXChatListViewController.m */,
-				A482F7A2240D5BF400081EB8 /* LXChatListViewController.xib */,
+				A4806D6A240E4816009B0189 /* chatSingleRoom */,
+				A4806D69240E4804009B0189 /* List */,
 			);
 			path = Chat;
 			sourceTree = "<group>";
@@ -250,6 +307,15 @@
 				A498DD88240E317B0001F619 /* LXAddNewContactsTableViewCell.xib */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		A4C8D7F7240E59B300986167 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				A4C8D7F8240E59D100986167 /* LXEMMessageHelper.h */,
+				A4C8D7F9240E59D100986167 /* LXEMMessageHelper.m */,
+			);
+			path = Tools;
 			sourceTree = "<group>";
 		};
 		C956586BDA524F72C6665191 /* Pods */ = {
@@ -320,7 +386,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A459C444240E7B8900A01D16 /* LXChatSingleViewController.xib in Resources */,
 				A482F7AA240D5D9500081EB8 /* LXLoginViewController.xib in Resources */,
+				A4806D70240E4C10009B0189 /* LXChatListConversationsTableViewCell.xib in Resources */,
 				A482F7B6240D683B00081EB8 /* LXMeViewController.xib in Resources */,
 				A482F7A4240D5BF400081EB8 /* LXChatListViewController.xib in Resources */,
 				A482F788240D58D000081EB8 /* LaunchScreen.storyboard in Resources */,
@@ -383,6 +451,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A498DD89240E317B0001F619 /* LXAddNewContactsTableViewCell.m in Sources */,
+				A459C448240E84B700A01D16 /* LXConversionListModel.m in Sources */,
 				A482F7AF240D605B00081EB8 /* LXRegisterViewController.m in Sources */,
 				A482F799240D598D00081EB8 /* LXBaseNavViewController.m in Sources */,
 				A498DD85240E31440001F619 /* LXBaseTableViewCell.m in Sources */,
@@ -391,10 +460,13 @@
 				A482F7B5240D683B00081EB8 /* LXMeViewController.m in Sources */,
 				A482F795240D596300081EB8 /* LXBaseViewController.m in Sources */,
 				A465E8E3240E36B70074D5FC /* LXAddNewContactsViewController.m in Sources */,
+				A4C8D7FA240E59D100986167 /* LXEMMessageHelper.m in Sources */,
 				A482F7A3240D5BF400081EB8 /* LXChatListViewController.m in Sources */,
+				A4806D6F240E4C10009B0189 /* LXChatListConversationsTableViewCell.m in Sources */,
 				A41095D9240E2C2200197E4E /* LXContactsListViewController.m in Sources */,
 				A482F77D240D58CE00081EB8 /* SceneDelegate.m in Sources */,
 				A482F7A9240D5D9500081EB8 /* LXLoginViewController.m in Sources */,
+				A459C443240E7B8900A01D16 /* LXChatSingleViewController.m in Sources */,
 				A482F79E240D5B9800081EB8 /* LXMainTabBarViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

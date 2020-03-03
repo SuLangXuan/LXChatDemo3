@@ -23,6 +23,8 @@
 #ifdef __OBJC__
 // 包含实时音视频功能 SDK 的头文件
 #import <Hyphenate/Hyphenate.h>
+//解析消息的工具
+#import "LXEMMessageHelper.h"
 
 #endif
 #endif /* PrefixHeader_pch */

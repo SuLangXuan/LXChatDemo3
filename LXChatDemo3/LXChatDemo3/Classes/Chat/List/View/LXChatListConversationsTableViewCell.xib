@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="LXChatListConversationsTableViewCell" id="KGk-i7-Jjw" customClass="LXChatListConversationsTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="65"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="65"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="E21-HM-2N8">
+                        <rect key="frame" x="0.0" y="0.0" width="1" height="65"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="65" id="W7f-XO-a3l"/>
+                            <constraint firstAttribute="width" constant="1" id="Zlx-Mf-7gD"/>
+                        </constraints>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tOO-nF-5cp">
+                        <rect key="frame" x="17" y="8" width="43" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="未读数" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rsf-Q7-6wv">
+                        <rect key="frame" x="68" y="8" width="52" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="messagemessagemessagemessagemessagemessage" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ghb-HJ-3ap">
+                        <rect key="frame" x="17" y="37" width="287" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="E21-HM-2N8" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="AES-2K-zO2"/>
+                    <constraint firstItem="Ghb-HJ-3ap" firstAttribute="leading" secondItem="tOO-nF-5cp" secondAttribute="leading" id="GqF-xc-KCG"/>
+                    <constraint firstItem="Ghb-HJ-3ap" firstAttribute="top" secondItem="tOO-nF-5cp" secondAttribute="bottom" constant="8" id="Iby-0a-5C4"/>
+                    <constraint firstItem="Rsf-Q7-6wv" firstAttribute="top" secondItem="tOO-nF-5cp" secondAttribute="top" id="L7f-zs-9xF"/>
+                    <constraint firstItem="tOO-nF-5cp" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="OwQ-Xk-oVh"/>
+                    <constraint firstAttribute="bottom" secondItem="E21-HM-2N8" secondAttribute="bottom" id="VtS-db-9xi"/>
+                    <constraint firstItem="tOO-nF-5cp" firstAttribute="leading" secondItem="E21-HM-2N8" secondAttribute="trailing" constant="16" id="Wpt-ps-0qm"/>
+                    <constraint firstItem="Rsf-Q7-6wv" firstAttribute="leading" secondItem="tOO-nF-5cp" secondAttribute="trailing" constant="8" id="j1Q-5n-Jz3"/>
+                    <constraint firstItem="E21-HM-2N8" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="j9R-gW-6ur"/>
+                    <constraint firstAttribute="trailing" secondItem="Ghb-HJ-3ap" secondAttribute="trailing" constant="16" id="rbk-rL-JHa"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="aW0-zy-SZf"/>
+            <connections>
+                <outlet property="lxUnReadCountLabel" destination="Rsf-Q7-6wv" id="WvL-Eg-5Cb"/>
+                <outlet property="lxmessageLabel" destination="Ghb-HJ-3ap" id="Mtv-Lq-rgY"/>
+                <outlet property="lxnameLabel" destination="tOO-nF-5cp" id="l3u-Ag-7lC"/>
+            </connections>
+            <point key="canvasLocation" x="137.68115942028987" y="107.8125"/>
+        </tableViewCell>
+    </objects>
+</document>

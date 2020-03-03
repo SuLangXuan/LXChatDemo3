@@ -9,6 +9,7 @@
 #import "LXContactsListViewController.h"
 #import "LXAddNewContactsTableViewCell.h"
 #import "LXAddNewContactsViewController.h"
+#import "LXChatSingleViewController.h"
 
 #define KLXAddNewContactsTableViewCell @"LXAddNewContactsTableViewCell"
 
@@ -67,7 +68,11 @@
     if (indexPath.row == 0) {
         LXAddNewContactsViewController *vc =  [LXAddNewContactsViewController  new];
         [self.navigationController pushViewController:vc animated:YES];
+    }else{
         
+        LXChatSingleViewController *vc = [LXChatSingleViewController new];
+        vc.conversationId = self.dataArr[indexPath.row-1];
+        [self.navigationController pushViewController:vc animated:YES];
         
     }
 }
