@@ -14,6 +14,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (weak, nonatomic) IBOutlet UILabel *lxnameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *lxmessageLabel;
 @property (weak, nonatomic) IBOutlet UILabel *lxUnReadCountLabel;
+@property (weak, nonatomic) IBOutlet UILabel *lxTimeLabel;
 
 @end
 

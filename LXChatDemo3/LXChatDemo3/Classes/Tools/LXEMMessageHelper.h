@@ -16,6 +16,8 @@ NS_ASSUME_NONNULL_BEGIN
 + (instancetype _Nonnull )sharedInstance;
 ///解析消息数据
 + (NSString *)lxparseEMMessage:(EMMessage *)message;
+///时间戳转成时间
++ (NSString *)LXTimeWithTimeIntervalString:(NSString *)timeString;
 @end
 
 NS_ASSUME_NONNULL_END
