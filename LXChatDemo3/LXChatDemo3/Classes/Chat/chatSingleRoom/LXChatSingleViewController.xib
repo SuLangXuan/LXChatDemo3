@@ -10,6 +10,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LXChatSingleViewController">
             <connections>
                 <outlet property="messageTF" destination="QYz-rF-yf0" id="npu-Wd-qUt"/>
+                <outlet property="tb" destination="QeW-20-Shf" id="1p8-8C-gc5"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>

@@ -26,11 +26,13 @@
     [self.tb registerClass:[UITableViewCell class] forCellReuseIdentifier:@"test"];
     [self.tb registerNib:[UINib nibWithNibName:KLXChatListConversationsTableViewCell bundle:nil] forCellReuseIdentifier:KLXChatListConversationsTableViewCell];
     [[EMClient sharedClient].chatManager addDelegate:self delegateQueue:nil];
+    
+
 }
 
 - (void)viewDidAppear:(BOOL)animated{
     [super viewDidAppear:animated];
-    
+//    [self.tb reloadData];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
@@ -62,10 +64,10 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     LXChatSingleViewController *vc = [LXChatSingleViewController new];
     NSArray *arr = [[EMClient sharedClient].chatManager getAllConversations];
-    vc.conversationId = arr[indexPath.row];
+    EMConversation *conversation = arr[indexPath.row];
+    vc.conversationId = conversation.conversationId;
     [self.navigationController pushViewController:vc animated:YES];
 }
-
 
 /*!
 @method
@@ -74,5 +76,13 @@
 - (void)messagesDidReceive:(NSArray *)aMessages{
     [self.tb reloadData];
 }
+
+
+///获取时间
+- (void)getConversationListArr{
+    
+}
+
+
 
 @end
