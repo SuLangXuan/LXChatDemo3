@@ -13,6 +13,10 @@
 		A459C443240E7B8900A01D16 /* LXChatSingleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A459C441240E7B8900A01D16 /* LXChatSingleViewController.m */; };
 		A459C444240E7B8900A01D16 /* LXChatSingleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A459C442240E7B8900A01D16 /* LXChatSingleViewController.xib */; };
 		A459C448240E84B700A01D16 /* LXConversionListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A459C447240E84B700A01D16 /* LXConversionListModel.m */; };
+		A46084ED240FAB260019E5B9 /* LXSinleChatRoomMessageTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A46084EB240FAB260019E5B9 /* LXSinleChatRoomMessageTableViewCell.m */; };
+		A46084EE240FAB260019E5B9 /* LXSinleChatRoomMessageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A46084EC240FAB260019E5B9 /* LXSinleChatRoomMessageTableViewCell.xib */; };
+		A46084F2240FACFC0019E5B9 /* LXSinleChatRoomRightMessageTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A46084F0240FACFC0019E5B9 /* LXSinleChatRoomRightMessageTableViewCell.m */; };
+		A46084F3240FACFC0019E5B9 /* LXSinleChatRoomRightMessageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A46084F1240FACFC0019E5B9 /* LXSinleChatRoomRightMessageTableViewCell.xib */; };
 		A465E8E3240E36B70074D5FC /* LXAddNewContactsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A465E8E1240E36B70074D5FC /* LXAddNewContactsViewController.m */; };
 		A465E8E4240E36B70074D5FC /* LXAddNewContactsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A465E8E2240E36B70074D5FC /* LXAddNewContactsViewController.xib */; };
 		A4806D6F240E4C10009B0189 /* LXChatListConversationsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A4806D6D240E4C10009B0189 /* LXChatListConversationsTableViewCell.m */; };
@@ -51,6 +55,12 @@
 		A459C442240E7B8900A01D16 /* LXChatSingleViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LXChatSingleViewController.xib; sourceTree = "<group>"; };
 		A459C446240E84B700A01D16 /* LXConversionListModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LXConversionListModel.h; sourceTree = "<group>"; };
 		A459C447240E84B700A01D16 /* LXConversionListModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LXConversionListModel.m; sourceTree = "<group>"; };
+		A46084EA240FAB260019E5B9 /* LXSinleChatRoomMessageTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LXSinleChatRoomMessageTableViewCell.h; sourceTree = "<group>"; };
+		A46084EB240FAB260019E5B9 /* LXSinleChatRoomMessageTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LXSinleChatRoomMessageTableViewCell.m; sourceTree = "<group>"; };
+		A46084EC240FAB260019E5B9 /* LXSinleChatRoomMessageTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LXSinleChatRoomMessageTableViewCell.xib; sourceTree = "<group>"; };
+		A46084EF240FACFC0019E5B9 /* LXSinleChatRoomRightMessageTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LXSinleChatRoomRightMessageTableViewCell.h; sourceTree = "<group>"; };
+		A46084F0240FACFC0019E5B9 /* LXSinleChatRoomRightMessageTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LXSinleChatRoomRightMessageTableViewCell.m; sourceTree = "<group>"; };
+		A46084F1240FACFC0019E5B9 /* LXSinleChatRoomRightMessageTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LXSinleChatRoomRightMessageTableViewCell.xib; sourceTree = "<group>"; };
 		A465E8E0240E36B70074D5FC /* LXAddNewContactsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LXAddNewContactsViewController.h; sourceTree = "<group>"; };
 		A465E8E1240E36B70074D5FC /* LXAddNewContactsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LXAddNewContactsViewController.m; sourceTree = "<group>"; };
 		A465E8E2240E36B70074D5FC /* LXAddNewContactsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LXAddNewContactsViewController.xib; sourceTree = "<group>"; };
@@ -142,6 +152,29 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		A46084E8240FAAB60019E5B9 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				A46084EA240FAB260019E5B9 /* LXSinleChatRoomMessageTableViewCell.h */,
+				A46084EB240FAB260019E5B9 /* LXSinleChatRoomMessageTableViewCell.m */,
+				A46084EC240FAB260019E5B9 /* LXSinleChatRoomMessageTableViewCell.xib */,
+				A46084EF240FACFC0019E5B9 /* LXSinleChatRoomRightMessageTableViewCell.h */,
+				A46084F0240FACFC0019E5B9 /* LXSinleChatRoomRightMessageTableViewCell.m */,
+				A46084F1240FACFC0019E5B9 /* LXSinleChatRoomRightMessageTableViewCell.xib */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		A46084E9240FAAC30019E5B9 /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				A459C440240E7B8900A01D16 /* LXChatSingleViewController.h */,
+				A459C441240E7B8900A01D16 /* LXChatSingleViewController.m */,
+				A459C442240E7B8900A01D16 /* LXChatSingleViewController.xib */,
+			);
+			path = controller;
+			sourceTree = "<group>";
+		};
 		A4806D69240E4804009B0189 /* List */ = {
 			isa = PBXGroup;
 			children = (
@@ -157,9 +190,8 @@
 		A4806D6A240E4816009B0189 /* chatSingleRoom */ = {
 			isa = PBXGroup;
 			children = (
-				A459C440240E7B8900A01D16 /* LXChatSingleViewController.h */,
-				A459C441240E7B8900A01D16 /* LXChatSingleViewController.m */,
-				A459C442240E7B8900A01D16 /* LXChatSingleViewController.xib */,
+				A46084E9240FAAC30019E5B9 /* controller */,
+				A46084E8240FAAB60019E5B9 /* view */,
 			);
 			path = chatSingleRoom;
 			sourceTree = "<group>";
@@ -393,7 +425,9 @@
 				A482F7A4240D5BF400081EB8 /* LXChatListViewController.xib in Resources */,
 				A482F788240D58D000081EB8 /* LaunchScreen.storyboard in Resources */,
 				A465E8E4240E36B70074D5FC /* LXAddNewContactsViewController.xib in Resources */,
+				A46084EE240FAB260019E5B9 /* LXSinleChatRoomMessageTableViewCell.xib in Resources */,
 				A498DD8A240E317B0001F619 /* LXAddNewContactsTableViewCell.xib in Resources */,
+				A46084F3240FACFC0019E5B9 /* LXSinleChatRoomRightMessageTableViewCell.xib in Resources */,
 				A482F7B0240D605B00081EB8 /* LXRegisterViewController.xib in Resources */,
 				A482F785240D58D000081EB8 /* Assets.xcassets in Resources */,
 				A41095DA240E2C2200197E4E /* LXContactsListViewController.xib in Resources */,
@@ -453,12 +487,14 @@
 				A498DD89240E317B0001F619 /* LXAddNewContactsTableViewCell.m in Sources */,
 				A459C448240E84B700A01D16 /* LXConversionListModel.m in Sources */,
 				A482F7AF240D605B00081EB8 /* LXRegisterViewController.m in Sources */,
+				A46084F2240FACFC0019E5B9 /* LXSinleChatRoomRightMessageTableViewCell.m in Sources */,
 				A482F799240D598D00081EB8 /* LXBaseNavViewController.m in Sources */,
 				A498DD85240E31440001F619 /* LXBaseTableViewCell.m in Sources */,
 				A482F77A240D58CE00081EB8 /* AppDelegate.m in Sources */,
 				A482F78B240D58D000081EB8 /* main.m in Sources */,
 				A482F7B5240D683B00081EB8 /* LXMeViewController.m in Sources */,
 				A482F795240D596300081EB8 /* LXBaseViewController.m in Sources */,
+				A46084ED240FAB260019E5B9 /* LXSinleChatRoomMessageTableViewCell.m in Sources */,
 				A465E8E3240E36B70074D5FC /* LXAddNewContactsViewController.m in Sources */,
 				A4C8D7FA240E59D100986167 /* LXEMMessageHelper.m in Sources */,
 				A482F7A3240D5BF400081EB8 /* LXChatListViewController.m in Sources */,

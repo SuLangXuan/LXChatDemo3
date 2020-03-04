@@ -18,6 +18,7 @@ NS_ASSUME_NONNULL_BEGIN
 + (NSString *)lxparseEMMessage:(EMMessage *)message;
 ///时间戳转成时间
 + (NSString *)LXTimeWithTimeIntervalString:(NSString *)timeString;
++ (NSString *)LXTimeWithTimeIntervalLongLong:(long long)timeL;
 @end
 
 NS_ASSUME_NONNULL_END

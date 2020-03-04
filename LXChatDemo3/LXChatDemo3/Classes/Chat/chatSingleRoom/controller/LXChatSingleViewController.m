@@ -7,6 +7,11 @@
 //
 
 #import "LXChatSingleViewController.h"
+#import "LXSinleChatRoomMessageTableViewCell.h"
+#import "LXSinleChatRoomRightMessageTableViewCell.h"
+
+#define KLXSinleChatRoomMessageTableViewCell @"LXSinleChatRoomMessageTableViewCell"
+#define KLXSinleChatRoomRightMessageTableViewCell @"LXSinleChatRoomRightMessageTableViewCell"
 
 @interface LXChatSingleViewController ()<UITableViewDelegate,UITableViewDataSource,EMChatManagerDelegate>
 @property (weak, nonatomic) IBOutlet UITextField *messageTF;
@@ -19,15 +24,17 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     //新建/获取一个会话    根据 conversationId 创建一个 conversation。
+    //
     [[EMClient sharedClient].chatManager getConversation:self.conversationId type:EMConversationTypeChat createIfNotExist:YES];
     self.tb.dataSource = self;
     self.tb.delegate = self;
     [self.tb registerClass:[UITableViewCell class] forCellReuseIdentifier:@"test"];
+    [self.tb registerNib:[UINib nibWithNibName:KLXSinleChatRoomMessageTableViewCell bundle:nil] forCellReuseIdentifier:KLXSinleChatRoomMessageTableViewCell];
+    [self.tb registerNib:[UINib nibWithNibName:KLXSinleChatRoomRightMessageTableViewCell bundle:nil] forCellReuseIdentifier:KLXSinleChatRoomRightMessageTableViewCell];
     [self getHistoryMessageData];
     self.title = self.conversationId;
     [[EMClient sharedClient].chatManager addDelegate:self delegateQueue:nil];
 }
-
 
 - (void)getHistoryMessageData{
     KWeakSelf
@@ -53,13 +60,22 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-   
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"test" forIndexPath:indexPath];
     EMMessage *message = self.dataArr[indexPath.row];
+    NSString *currentUser = [[EMClient sharedClient] currentUsername];
+    if (![currentUser isEqualToString:message.from]) {
+        LXSinleChatRoomMessageTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:KLXSinleChatRoomMessageTableViewCell forIndexPath:indexPath];
+        cell.lxTimelabel.text = [LXEMMessageHelper LXTimeWithTimeIntervalLongLong:message.timestamp];
+           cell.lxNameLabel.text = message.from;
+           cell.lxMessageLabel.text = [LXEMMessageHelper lxparseEMMessage:message];
+        return cell;
+    }else{
+        LXSinleChatRoomRightMessageTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:KLXSinleChatRoomRightMessageTableViewCell forIndexPath:indexPath];
+        cell.lxTimelabel.text = [LXEMMessageHelper LXTimeWithTimeIntervalLongLong:message.timestamp];
+           cell.lxNameLabel.text = message.from;
+           cell.lxMessageLabel.text = [LXEMMessageHelper lxparseEMMessage:message];
+        return cell;
+    }
     
-    
-    cell.textLabel.text = [NSString  stringWithFormat:@"from:%@->to:%@ text:%@",message.from,message.to,[LXEMMessageHelper lxparseEMMessage:message]];
-    return cell;
 }
 
 - (IBAction)sendMessageBtn:(id)sender {
@@ -80,8 +96,9 @@
         if (!error) {
             [weakSelf getHistoryMessageData];
             NSLog(@"发送消息成功");
+            weakSelf.messageTF.text = @"";
             //会话列表同时跟新
-            [[NSNotificationCenter defaultCenter] postNotificationName:@"xuan1" object:nil userInfo:nil];
+//            [[NSNotificationCenter defaultCenter] postNotificationName:@"xuan1" object:nil userInfo:nil];
         } else {
             NSLog(@"发送消息失败的原因 --- %@", error.errorDescription);
         }

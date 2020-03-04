@@ -35,12 +35,12 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-//    NSArray *arr = [[EMClient sharedClient].chatManager getAllConversations];
+    //    NSArray *arr = [[EMClient sharedClient].chatManager getAllConversations];
     return self.conversationArr.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-//    NSArray *arr = [[EMClient sharedClient].chatManager getAllConversations];
+    //    NSArray *arr = [[EMClient sharedClient].chatManager getAllConversations];
     EMConversation *conversation = self.conversationArr[indexPath.row];
     int num = [conversation unreadMessagesCount];
     LXChatListConversationsTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:KLXChatListConversationsTableViewCell forIndexPath:indexPath];
@@ -75,30 +75,33 @@
 ///获取按时间排序的数组
 - (void)getSortAfterConversationListArr{
     NSMutableArray<EMConversation *> *arr = [NSMutableArray arrayWithArray:[[EMClient sharedClient].chatManager getAllConversations]];
-    
-//    for (EMConversation *con in arr) {
-//        NSLog(@"%@",con.conversationId);
-//    }
+    //    打印查看排序前的结果
+    //    for (EMConversation *con in arr) {
+    //        NSLog(@"%@",con.conversationId);
+    //    }
     
     
     //时间戳越大的时间越新，距离1972 越远
-    EMConversation *tempConversion  = [EMConversation new];
-    for (int i = 0; i<arr.count-1; i++) {
-        for (int j = 0; j<arr.count-1-i; j++) {
-            if (arr[j].latestMessage.timestamp<arr[j+1].latestMessage.timestamp) {
-                tempConversion = arr[j];
-                arr[j] = arr[j+1];
-                arr[j+1] = tempConversion;
+    if (arr.count>0) {
+        EMConversation *tempConversion  = [EMConversation new];
+        for (int i = 0; i<arr.count-1; i++) {
+            for (int j = 0; j<arr.count-1-i; j++) {
+                if (arr[j].latestMessage.timestamp<arr[j+1].latestMessage.timestamp) {
+                    tempConversion = arr[j];
+                    arr[j] = arr[j+1];
+                    arr[j+1] = tempConversion;
+                }
             }
         }
+        [self.conversationArr removeAllObjects];
+        [self.conversationArr addObjectsFromArray:arr];
     }
     
-    [self.conversationArr removeAllObjects];
-    [self.conversationArr addObjectsFromArray:arr];
     
-//    for (EMConversation *con in arr) {
-//        NSLog(@"%@",con.conversationId);
-//    }
+    //    打印查看排序后的结果
+    //    for (EMConversation *con in arr) {
+    //        NSLog(@"%@",con.conversationId);
+    //    }
     
     [self.tb reloadData];
     
